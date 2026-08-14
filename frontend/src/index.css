@@ -1,0 +1,71 @@
+:root {
+  --color-bg: #eef1f0;
+  --color-surface: #ffffff;
+  --color-ink: #1b2321;
+  --color-ink-soft: #57625e;
+  --color-line: #d7ddda;
+  --color-accent: #2f6f5e;
+  --color-accent-soft: #e2ede9;
+
+  --priority-low: #7c9c8f;
+  --priority-medium: #cf8b3d;
+  --priority-high: #c65a4e;
+
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --radius: 8px;
+  --shadow-card: 0 1px 2px rgba(27, 35, 33, 0.06), 0 1px 0 rgba(27, 35, 33, 0.03);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+#root {
+  min-height: 100vh;
+}
